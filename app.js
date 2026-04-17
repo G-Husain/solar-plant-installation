@@ -37,3 +37,12 @@ form.addEventListener("submit", function(event) {
   
  }, 5000);
 
+
+//  responsive navbar
+let hamburger = document.querySelector('.hamburger');
+let nav = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('open_nav_bar');
+  hamburger.classList.toggle('active');
+});
