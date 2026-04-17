@@ -25,7 +25,7 @@ header{
     padding-right: 50px;
 }
 #logo{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 100px;
     width: max-content;
     display: flex;
@@ -42,7 +42,7 @@ header{
 }
 
 #navbar{
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 #navbar>ul{
     width: 340px;
@@ -67,10 +67,6 @@ list-style-type: none;
 }
 
 
-main{
-    /* background-color:rgb(240, 245, 245); */
-
-}
 
 /*   main content part hero section start*/
 
@@ -88,14 +84,15 @@ main{
  
 }
 
-#hero_content h1{
+#hero_content h3{
        color: chartreuse;
-    font-size: 40px;
+    font-size: 20px;
 }
 #hero_content button{
        border-radius: 7px;
     background-color:yellow;
     padding: 7px;
+    border: none;
     color: black;
     font-size: 18px;
 }
@@ -105,78 +102,18 @@ main{
     font-size: 25px;
 
 
-}.hamburger {
+}
+#bvs{
+    display: none;
+}
+.hamburger {
   display: none;
   font-size: 30px;
   cursor: pointer;
 }
 
 
-/* responsiveness for header hero section */
 
-
-/* ========================= */
-/* 📱 MOBILE (max 576px) */
-/* ========================= */
-@media (max-width: 576px) {
-    haader{
-        width: 100%;
-    }
-  /* hide name on mobile (optional but recommended) */
-  #RES {
-    display: none;
-  }
-
-  /* show hamburger */
- .hamburger {
-    display: block;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: white;
-    z-index: 1100;
-  }
-
-  /* navbar UL hidden by default */
- .nav-menu {
-    position: fixed;
-    top: 60px;
-    right: -220px;        /* hidden initially */
-    width: 200px;
-    background: #0077b6;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    transition: right 0.4s ease;
-    z-index: 1000;
-  }
-
-  /* when open */
-  .nav-menu.open_nav_bar {
-    right: 0;
-    display: flex;
-  }
-
-  .nav-menu li {
-    padding: 15px 0;
-  }
-  .hamburger .open-icon {
-    color: black;
-  display: block;
-}
-
-.hamburger .close-icon {
-  display: none;
-}
-
-.hamburger.active .open-icon {
-  display: none;
-}
-
-.hamburger.active .close-icon {
-  display: block;
-  color: black;
-}
-}
 
 
 /* ========================= */
@@ -437,6 +374,7 @@ padding-right: 75px;
  font-size: 15px;
  cursor: pointer;
  margin-bottom: 9px;
+ border: none;
 }
 .price-box button:hover{
 transform: scale(1.04);
@@ -588,6 +526,13 @@ margin-top: 20px;
     width: 100%;    
     margin-bottom: 20px;
 }
+#booking-form-section #FR{
+    font-size: 20px;
+}
+#booking-form-section #Sch_s_a{
+font-size: 40px;
+}
+
 #booking_heading-box{
     /* border: 2px solid black; */
     text-align: center;
@@ -759,3 +704,140 @@ align-items: center;
 font-size: 17px;
 }
 
+/* Responsiveness code */
+/* ========================= */
+/* 📱 MOBILE (max 576px) */
+/* ========================= */
+@media (max-width: 576px) {
+ 
+  /* hide name on mobile (optional but recommended) */
+  #RES {
+    display: none;
+  }
+
+  /* show hamburger */
+ .hamburger {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    z-index: 1100;
+  }
+
+  /* navbar UL hidden by default */
+ .nav-menu {
+    position: fixed;
+    top: 60px;
+    right: -220px;        /* hidden initially */
+    width: 200px;
+    background: #0077b6;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+  }
+
+  /* when open */
+  .nav-menu.open_nav_bar {
+    right: 0;
+    display: flex;
+  }
+
+  .nav-menu li {
+    padding: 15px 0;
+  }
+  .hamburger .open-icon {
+    color: black;
+  display: block;
+}
+
+.hamburger .close-icon {
+  display: none;
+}
+
+.hamburger.active .open-icon {
+  display: none;
+}
+
+.hamburger.active .close-icon {
+  display: block;
+  color: black;
+}
+
+
+
+
+#bvs{
+    display: block;
+}
+#hero_content p{
+    display: none;
+
+
+}
+
+
+.service_box{
+    max-width: 368px;
+}
+.service_box h3{
+    font-size: 15px;
+}
+.service_box p{
+    font-size: 12px;
+}
+#headingServices {
+    font-size: 30px;
+}
+#pro_heading {
+    font-size: 30px;
+}
+
+#our_project{
+justify-content: center;
+}
+
+.price-heading {
+    font-size: 30px;
+}
+.price-description {
+    font-size: 14px;
+}
+
+.price-box {
+    max-width: 322px;
+}
+.price-box h1 {
+    font-size: 17px;
+}
+#working {
+   justify-content: center;
+       padding: 40px 10px;
+}
+#working_heading {
+    font-size: 30px;
+ 
+}
+
+#FAQ {
+    padding: 50px 10px;
+}
+
+
+.faq-question {
+    font-size: 14px;
+}
+.faq-answer p {
+    font-size: 14px;
+
+}
+#booking-form-section #Sch_s_a{
+font-size: 20px;
+}
+
+#booking_heading-box{
+    line-height:31px;
+padding: 10px;
+}
+}
