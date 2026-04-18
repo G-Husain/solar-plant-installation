@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body{
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
       background-color: #f7f9fc;
 }
@@ -24,8 +25,7 @@ header{
     padding-left: 40px;
     padding-right: 50px;
 }
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
+h1 {
         font-size: 32px; 
            color: #2ecc71;  
 }
@@ -44,7 +44,7 @@ h1, h2, h3 {
 /*the name of website  */
 #RES{
     color:cadetblue;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 #navbar{
@@ -89,25 +89,22 @@ list-style-type: none;
 
  
 }
-
-#hero_content h3{
-       color: chartreuse;
-    font-size: 20px;
+#EHB{
+font-size: 32px; 
+           color: #2ecc71;  
 }
+
 #hero_content button{
        border-radius: 7px;
-    background-color:yellow;
+    background-color:#5F9EA0;
     padding: 7px;
     border: none;
-    color: black;
     font-size: 18px;
 }
 
 #hero_content p{
             color: blanchedalmond;
-    font-size: 25px;
-
-
+    margin-top: 20px;
 }
 #bvs{
     display: none;
@@ -116,37 +113,6 @@ list-style-type: none;
   display: none;
   font-size: 30px;
   cursor: pointer;
-}
-
-
-
-
-
-/* ========================= */
-/* 📱 TABLET (577px - 992px) */
-/* ========================= */
-@media (max-width: 992px) {
-
-    header {
-        padding: 10px 20px;
-    }
-
-    #RES {
-        font-size: 30px;
-    }
-
-    #navbar ul {
-        width: auto;
-        gap: 15px;
-    }
-
-    #hero_content h1 {
-        font-size: 30px;
-    }
-
-    #hero_content p {
-        font-size: 20px;
-    }
 }
 
 
@@ -163,11 +129,6 @@ list-style-type: none;
         font-size: 28px;
     }
 }
-
-
-
-
-
 
 
 /* services part start here */
@@ -422,7 +383,6 @@ list-style-type: none;
 .price-heading{
     text-align: center;
     font-size: 32px;
-    color: #2ecc71;
 }
 
 .price-description{
@@ -461,15 +421,17 @@ list-style-type: none;
     transform: scale(1.03);
     cursor: pointer;
 }
+.working_child .wid{
+    font-size: 20px;
+    color: #2ECC71;
+}
 
 .working_child p{
-    font-size:16px;
-    opacity: 0.8;
+    font-size:14px;
+    opacity: 0.7;
 margin-top: 20px;
 }
-.working_child h2{
-    color: cadetblue;
-}
+
 
 /* FAQ Section */
 #FAQ {
@@ -499,7 +461,7 @@ margin-top: 20px;
     padding: 20px;
     font-size: 20px;
     border: none;
-    background-color: #007BFF;
+    background-color: #5F9EA0;
     color: white;
     cursor: pointer;
     outline: none;
@@ -543,6 +505,7 @@ margin-top: 20px;
 }
 #booking-form-section #FR{
     font-size: 20px;
+    color: #5F9EA0;
 }
 #booking-form-section #Sch_s_a{
 font-size: 40px;
@@ -790,6 +753,10 @@ font-size: 17px;
 #bvs{
     display: block;
 }
+
+#hero_content h2{
+    color: #FFEBCD;
+}
 #hero_content p{
     display: none;
 
@@ -873,4 +840,67 @@ font-size: 20px;
     line-height:31px;
 padding: 10px;
 }
+}
+
+/* ========================= */
+/* 📱 TABLET (577px - 992px) */
+/* ========================= */
+@media (max-width: 992px) {
+
+     .hamburger {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    z-index: 1100;
+  }
+
+
+  /* navbar UL hidden by default */
+ .nav-menu {
+    position: fixed;
+    top: 100px;
+    right: -352px;    
+    height: 100vh;
+    background: #0077b6;
+    flex-direction: column;
+    transition: right 0.4s ease;
+    z-index: 1000;
+    padding: 10px 20px;
+    text-align: center;
+  } 
+
+
+   .nav-menu.open_nav_bar {
+    right: 0;
+    display: flex;
+  }
+  .nav-menu li {
+    padding: 15px 0;
+  }
+  .hamburger .open-icon {
+    color: black;
+  display: block;
+}
+
+.hamburger .close-icon {
+  display: none;
+}
+
+.hamburger.active .open-icon {
+  display: none;
+}
+
+.hamburger.active .close-icon {
+  display: block;
+  color: black;
+}
+
+#hero_content p{
+    font-size: 28px;
+}
+#working{
+    justify-content: center;
+}
+
 }
