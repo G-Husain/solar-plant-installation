@@ -172,7 +172,7 @@ list-style-type: none;
 }
 
 #services{
-    /* border: 2px solid black; */
+    border: 2px solid black;
     width: 100%;
     row-gap: 40px;
     display: flex;
@@ -182,6 +182,7 @@ list-style-type: none;
      background-color: #f7f9fc;
 }
 .service_box{
+    border: 2px solid yellow;
     border-bottom: 1px solid black;
     max-width: 400px;
     margin-top: 20px;
@@ -209,7 +210,7 @@ list-style-type: none;
     font-size: 16px;
 }
 .img_box{
-    /* border: 2px solid black; */
+    border: 2px solid black;
     width: 100%;
     height: 270px;
     
@@ -231,6 +232,7 @@ list-style-type: none;
 }
 
 #our_project{
+    border: 2px solid black;
  background-color:#e6e1e1;
 width: 100%;
 display: flex;
@@ -240,7 +242,7 @@ padding-left: 75px;
 padding-right: 75px;
 }
 .project-box{
-    /* border: 2px  solid rgb(122, 119, 119); */
+    border: 2px  solid rgb(122, 119, 119);
     max-width:325px;
     margin-top: 80px;
     margin-bottom: 20px;
@@ -257,7 +259,7 @@ padding-right: 75px;
 }
 
 .image-box{
-    /* border: 2px solid black; */
+    border: 2px solid black;
     width: 100%;
     height: 300px;
     border-radius: 10px;
@@ -269,6 +271,7 @@ padding-right: 75px;
 }
 
 .description-box{
+    width: 100%;
     text-align: center;
    margin-top: 10px;
    padding: 15px;
@@ -284,6 +287,7 @@ padding-right: 75px;
 }
 
 .spec-boxes {
+    width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -777,9 +781,15 @@ font-size: 17px;
 
 }
 
+#services{
+    padding: 20px;
+}
 
-.service_box{
-    max-width: 368px;
+.img_box{
+    width: 100%;
+}
+.img_box img{
+    width: 100%;
 }
 .service_box h3{
     font-size: 15px;
@@ -801,6 +811,7 @@ justify-content: center;
 .price-heading {
     font-size: 30px;
 }
+
 .price-description {
     font-size: 14px;
 }
