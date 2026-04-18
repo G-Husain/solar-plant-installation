@@ -351,7 +351,7 @@ padding-right: 75px;
     background-color: white;
     border-radius: 20px;
     padding: 10px;
-    max-width: 380px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -805,9 +805,16 @@ font-size: 17px;
 }
 
 #our_project{
-justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
+.project-box{
+    width: 100%;          /* full width */
+    max-width: 100%;      /* limit hata do */
+    margin-left: 0;
+    margin-right: 0;
+}
 .price-heading {
     font-size: 30px;
 }
