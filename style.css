@@ -26,13 +26,13 @@ header{
 }
 #logo{
     /* border: 2px solid black; */
-    height: 100px;
+    height: 100%;
     width: max-content;
     display: flex;
     align-items: center;
 }
 #logoImage{
-    height: 100px;
+    height: 100%;
     object-fit: cover;
 }
 /*the name of website  */
@@ -46,8 +46,7 @@ header{
 }
 #navbar>ul{
     width: 340px;
-display:flex ;
-justify-content: space-between;
+gap: 20px;
 font-size: 20px;
 list-style-type: none;
 
@@ -714,6 +713,11 @@ font-size: 17px;
 /* ========================= */
 @media (max-width: 576px) {
  
+    header{
+        height: 60px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
   /* hide name on mobile (optional but recommended) */
   #RES {
     display: none;
@@ -728,26 +732,25 @@ font-size: 17px;
     z-index: 1100;
   }
 
+
   /* navbar UL hidden by default */
  .nav-menu {
     position: fixed;
     top: 60px;
-    right: -220px;        /* hidden initially */
-    width: 200px;
+    right: -220px;    
+    height: 100vh;
     background: #0077b6;
     flex-direction: column;
-    gap: 15px;
-    padding: 20px;
     transition: right 0.4s ease;
     z-index: 1000;
-  }
+    padding: 10px 20px;
+  } 
 
-  /* when open */
-  .nav-menu.open_nav_bar {
+
+   .nav-menu.open_nav_bar {
     right: 0;
     display: flex;
   }
-
   .nav-menu li {
     padding: 15px 0;
   }
