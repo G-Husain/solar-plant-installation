@@ -845,7 +845,7 @@ padding: 10px;
 /* ========================= */
 /* 📱 TABLET (577px - 992px) */
 /* ========================= */
-@media (max-width: 992px) {
+@media (min-width:577px)and (max-width: 992px) {
 
      .hamburger {
     display: block;
