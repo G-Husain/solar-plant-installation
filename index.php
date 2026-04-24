@@ -1,3 +1,39 @@
+<?php
+include ('db.php');
+
+
+
+$message="";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $name = $_POST['customer'];                   
+    $email = $_POST['EmailAddress'];
+    $phone = $_POST['phoneNumber'];
+    $address = $_POST['Address'];
+    $type = $_POST['SolarType'];
+  
+    if(
+    !empty(trim($name)) &&
+    !empty(trim($email)) &&
+    !empty(trim($phone)) &&
+    !empty(trim($address)) &&
+    !empty(trim($type)))
+    {
+    $sql = "INSERT INTO requests (name, email, phone, address, type)
+            VALUES ('$name', '$email', '$phone', '$address', '$type')";
+
+    if (mysqli_query($conn, $sql)) {
+      
+    header("Location: thanks.html");
+    exit();
+}
+    
+    else {
+        echo "❌ Error: " . mysqli_error($conn);
+    }}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,15 +47,15 @@
     <!-- header of the page -->
     <header>
 
-        <div id="logo"><img src="./images/logo.png " alt="logo" id="logoImage">  </div>
+        <div id="logo"><img src="./images/logo.png " alt="logo" id="logoImage"><h1 id="RES">BrightVolt Solutions</h1></div>
       
-        <h1 id="RES">BrightVolt Solutions</h1>
     <nav id="navbar">
         <ul class="nav-menu">
             <li><a href="#hero"> Home</a></li>
             <li><a href="#aboutME">About</a></li>
             <li><a href="#pro_heading">Projects</a></li>
             <li><a href="#headingServices">Services</a></li>
+            <li><a href="signin.php" id="sign_in">Sign In</a></li>
         </ul>
             <div class="hamburger">
     <i class="fas fa-bars open-icon"></i>
@@ -320,32 +356,36 @@ Our licensed team performs the safe and efficient installation of the panels, wi
    </div>
    <br><br><br>
 <div id="form_box">
-  <form id="solarForm">
+  <form id="solarForm" method="POST">
     <h2>Book Your Solar Installation</h2>
 
     <label for="name">Full Name</label>
-    <input type="text" id="name" name="customer" placeholder="Enter your full name">
+    <input type="text" id="name" name="customer" placeholder="Enter your full name" required>
 
     <label for="email">Email Address</label>
-    <input type="email" id="email" name="EmailAddress" placeholder="Enter your email">
+    <input type="email" id="email" name="EmailAddress" placeholder="Enter your email" required>
 
     <label for="number">Phone Number</label>
-    <input type="number" id="number" name="phoneNumber" placeholder="Enter your phone number">
-
-    <label for="address">Home Address</label>
-    <input type="text" id="address" name="homeAddress" placeholder="Enter your address">
+    <input type="text" id="number" name="phoneNumber" placeholder="Enter your phone number"  
+        pattern="03[0-9]{9}" 
+        minlength="11"
+       maxlength="11" 
+       required>
+    <label for="address">Address</label>
+    <input type="text" id="address" name="Address" placeholder="Enter your address" required>
 
     <label for="SolarType">Select Solar Type</label>
-    <select id="SolarType" name="SolarType">
-      <option value="Cml">Commercial</option>
-      <option value="Edl">Educational</option>
-      <option value="Indl">Industrial</option>
+    <select id="SolarType" name="SolarType" required>
+       <option value="" disabled selected>Select Solar Type</option>
+      <option value=""Commercial>Commercial</option>
+      <option value="Educational">Educational</option>
+      <option value="Industrial">Industrial</option>
     </select>
-
-    <button type="submit">Submit</button>
-   <p id="confirmationMessage" style=" display:none; text-align: center; color:#007BFF; font-size: 20px;">
-    ✅Your form has been submitted successfully!
-  </p>
+    <input type="submit" id="submit_btn">
+    <p style="text-align:center; margin-top:10px;">
+    Already applied? 
+    <a href="checkstatus.php">Check Your Status</a>
+</p>
   </form>
 </div>
  </section>

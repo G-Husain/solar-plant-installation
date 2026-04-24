@@ -1,0 +1,64 @@
+
+body{
+    font-family: Arial;
+    background:#f4f6f9;
+    margin:0;
+}
+
+/* Header */
+.header{
+    background:#007b5e;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logout-btn,.back-btn{
+    background:red;
+    color:white;
+    padding:8px 15px;
+    text-decoration:none;
+    border-radius:5px;
+}
+.back-btn{
+    color: black;
+    background-color: green;
+}
+/* Table */
+table{
+    width:90%;
+    margin:30px auto;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+th, td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+th{
+    background:#007bff;
+    color:white;
+}
+
+/* Buttons */
+.btn{
+    padding:6px 10px;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:13px;
+}
+
+.accept{ background:green; }
+.reject{ background:orange; }
+.delete{ background:red; }
+
+.btn:hover{
+    opacity:0.8;
+}

@@ -44,20 +44,21 @@ h1 {
 /*the name of website  */
 #RES{
     color:cadetblue;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 #navbar{
     /* border: 2px solid black; */
+    display: flex;
 }
 #navbar>ul{
-    width: 340px;
+    width: max-content;
     display:flex ;
 gap: 20px;
 font-size: 20px;
 list-style-type: none;
-
 }
+
 
 #navbar a{
     color:black;
@@ -72,6 +73,10 @@ list-style-type: none;
   display: none;
 }
 
+.nav-menu #sign_in{
+    font-size: 13px;
+    color: rgb(58, 196, 201);
+}
 
 
 /*   main content part hero section start*/
@@ -89,10 +94,8 @@ list-style-type: none;
 
  
 }
-#EHB{
-font-size: 32px; 
-           color: #2ecc71;  
-}
+
+
 
 #hero_content button{
        border-radius: 7px;
@@ -102,9 +105,13 @@ font-size: 32px;
     font-size: 18px;
 }
 
+#EHB{
+    color: #2ecc71;  ;
+}
+
 #hero_content p{
             color: blanchedalmond;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 #bvs{
     display: none;
@@ -113,21 +120,6 @@ font-size: 32px;
   display: none;
   font-size: 30px;
   cursor: pointer;
-}
-
-
-/* ========================= */
-/* 💻 LARGE SCREENS (1200px+) */
-/* ========================= */
-@media (min-width: 1200px) {
-
-    #hero_content h1 {
-        font-size: 48px;
-    }
-
-    #hero_content p {
-        font-size: 28px;
-    }
 }
 
 
@@ -579,7 +571,7 @@ font-size: 40px;
 }
 
 /* Button styling */
-#form_box button {
+#form_box #submit_btn {
     background-color: #007BFF;
     color: white;
     font-size: 18px;
@@ -596,7 +588,6 @@ font-size: 40px;
     background-color: #0056b3;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-
 
 
 

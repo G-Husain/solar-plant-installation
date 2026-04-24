@@ -16,28 +16,6 @@ faqBtns.forEach(btn => {
   });
 });
 
-// Form element ko select karo
-const form = document.getElementById("solarForm");
-
-// Message element ko select karo
-const message = document.getElementById("confirmationMessage");
-
-// Form submit event handle karo
-form.addEventListener("submit", function(event) {
-  event.preventDefault(); // Page reload nahi hona chahiye
-
-  // Form submission ke baad message show karo
- setTimeout(()=>{
-    message.style.display = "block";
-    form.reset();
-    setTimeout(()=>{
-        message.style.display = "none";
-    },3000)
- })
-  
- }, 5000);
-
-
 //  responsive navbar
 let hamburger = document.querySelector('.hamburger');
 let nav = document.querySelector('.nav-menu');
@@ -46,3 +24,4 @@ hamburger.addEventListener('click', () => {
   nav.classList.toggle('open_nav_bar');
   hamburger.classList.toggle('active');
 });
+
