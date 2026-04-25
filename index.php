@@ -135,76 +135,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </section>
 
         <!-- the project that i have completed -->
-  <h2 id="pro_heading">Our Successful Project</h2>
-      <section id="our_project">
+
+        <h2 id="pro_heading">Our Successful Project</h2>
+        <section id="our_project">
+<?php
+include 'db.php';
+$result = mysqli_query($conn, "SELECT * FROM projects");
+while($row = mysqli_fetch_assoc($result)){
+?>
+
 
   <!-- CARD 1 -->
   <div class="project-card">
-    <img src="./images/project1.jpg" class="project-img">
+    <img src="./images/<?php echo $row['image']; ?>" class="project-img">
 
     <div class="project-content">
-      <span class="tag">Commercial</span>
-      <h2>Residential Solar Installation</h2>
-      <p class="location">Bahria Town, Lahore</p>
+      <span class="tag"><?php echo $row['tag']; ?></span>
+      <h2><?php echo $row['title']; ?></h2>
+      <p class="location"><?php echo $row['location']; ?></p>
 
       <p class="desc">
-        Installed a hybrid rooftop solar power system to ensure reliable, clean energy for a modern household.
+           <?php echo $row['description']; ?>
       </p>
 
       <div class="specs">
-        <div><strong>6kW</strong><span>System</span></div>
-        <div><strong>Tier-1</strong><span>Panels</span></div>
-        <div><strong>50%</strong><span>Savings</span></div>
-        <div><strong>1.2M</strong><span>PKR</span></div>
+        <div><strong><?php echo $row['spec1']; ?></strong><span><?php echo $row['spec1_label']; ?></span></div>
+        <div><strong><?php echo $row['spec2']; ?></strong><span><?php echo $row['spec2_label']; ?></span></div>
+        <div><strong><?php echo $row['spec3']; ?></strong><span><?php echo $row['spec3_label']; ?></span></div>
+        <div><strong><?php echo $row['spec4']; ?></strong><span><?php echo $row['spec4_label']; ?></span></div>
       </div>
     </div>
   </div>
-
-  <!-- CARD 2 -->
-  <div class="project-card">
-    <img src="./images/project2.jpeg" class="project-img">
-
-    <div class="project-content">
-      <span class="tag">Commercial</span>
-      <h2>Al Noor Shopping Complex</h2>
-      <p class="location">Karachi</p>
-
-      <p class="desc">
-        Installed an on-grid system for efficient commercial energy usage and cost reduction.
-      </p>
-
-      <div class="specs">
-        <div><strong>25kW</strong><span>System</span></div>
-        <div><strong>3-Phase</strong><span>Inverter</span></div>
-        <div><strong>70%</strong><span>Savings</span></div>
-        <div><strong>4.5M</strong><span>PKR</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CARD 3 -->
-  <div class="project-card">
-    <img src="./images/project3.jpg" class="project-img">
-
-    <div class="project-content">
-      <span class="tag">Educational</span>
-      <h2>City Science School</h2>
-      <p class="location">Islamabad</p>
-
-      <p class="desc">
-        Hybrid solar system for classrooms and labs with uninterrupted power.
-      </p>
-
-      <div class="specs">
-        <div><strong>10kW</strong><span>System</span></div>
-        <div><strong>Battery</strong><span>Backup</span></div>
-        <div><strong>Full</strong><span>Coverage</span></div>
-        <div><strong>2M</strong><span>PKR</span></div>
-      </div>
-    </div>
-  </div>
+ 
+  <?php } ?>
 
 </section>
+
 <br>
 
         <!-- this section is the price section -->

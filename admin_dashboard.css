@@ -62,3 +62,43 @@ th{
 .btn:hover{
     opacity:0.8;
 }
+
+/* this is the project button css */
+
+.container{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+.btn_project{
+    display:block;
+    padding:12px;
+    margin:10px 0;
+    background:#007bff;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.btn_project:hover{
+    background:#0056b3;
+}
+
+@media (max-width: 987px) {
+
+    #btn_td{
+        line-height: 31px;
+    }
+
+}

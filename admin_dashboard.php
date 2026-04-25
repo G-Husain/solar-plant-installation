@@ -77,7 +77,7 @@ if ($count == 0) {
         <td><?php echo $row['status']; ?></td>
         <td><?php echo $row['created_at']; ?></td>
 
-        <td>
+        <td id="btn_td">
             <a class="btn accept" href="?action=accept&id=<?php echo $row['id']; ?>">Accept</a>
             <a class="btn reject" href="?action=reject&id=<?php echo $row['id']; ?>">Reject</a>
             <a class="btn delete" href="?action=delete&id=<?php echo $row['id']; ?>" 
@@ -90,6 +90,18 @@ if ($count == 0) {
 ?>
 
 </table>
+<br><br><br>
+
+<div class="container">
+
+<h1>Change project Data</h1>
+
+<a class="btn_project" href="project_update.php?id=1">Update Project 1</a>
+<a class="btn_project" href="project_update.php?id=2">Update Project 2</a>
+<a class="btn_project" href="project_update.php?id=3">Update Project 3</a>
+
+</div>
+
 
 </body>
 </html>
