@@ -46,8 +46,8 @@ $count = mysqli_num_rows($result);
 <div class="header">
     <h2>Admin Dashboard</h2>
     <div>
-        <a href="index.php" class="back-btn">Back</a>
-    <a href="logout.php" class="logout-btn">Logout</a>
+        <a href="project_update.php" class="upd-btn">Update Project</a>
+    <a href="index.php" class="logout-btn">Logout</a>
     </div>
 </div>
 
@@ -91,16 +91,16 @@ if ($count == 0) {
 
 </table>
 <br><br><br>
+<!-- 
+<div class="container"> -->
 
-<div class="container">
-
-<h1>Change project Data</h1>
+<!-- <h1>Change project Data</h1>
 
 <a class="btn_project" href="project_update.php?id=1">Update Project 1</a>
 <a class="btn_project" href="project_update.php?id=2">Update Project 2</a>
-<a class="btn_project" href="project_update.php?id=3">Update Project 3</a>
+<a class="btn_project" href="project_update.php?id=3">Update Project 3</a> -->
 
-</div>
+<!-- </div> -->
 
 
 </body>
